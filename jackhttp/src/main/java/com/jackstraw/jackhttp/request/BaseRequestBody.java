@@ -1,5 +1,7 @@
 package com.jackstraw.jackhttp.request;
 
+import com.alibaba.fastjson.JSON;
+
 import java.io.Serializable;
 
 /**
@@ -7,7 +9,10 @@ import java.io.Serializable;
  * @date 2019/1/1
  * @describe 网络请求request基类(所有的网络请求必须继承这个类)
  */
-public class BaseRequest implements Serializable {
+public class BaseRequestBody implements Serializable {
 
-
+    @Override
+    public String toString() {
+        return JSON.toJSONString(this);
+    }
 }

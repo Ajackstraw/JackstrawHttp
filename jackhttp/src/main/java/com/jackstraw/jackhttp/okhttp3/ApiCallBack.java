@@ -9,21 +9,9 @@ import java.lang.reflect.Type;
  */
 public abstract class ApiCallBack<T> {
 
-    /**
-     * 请求失败
-     *
-     * @param isCommonError 是否为系统级的服务器错误code
-     * @param errorCode
-     * @param errorMsg
-     */
-    public abstract void onFail(boolean isCommonError, String errorCode, String errorMsg);
+    public abstract void onFail(String errorCode, String errorMsg);
 
     public abstract void onSuccess(T t);
 
-    public void onCompleted() {
-    }
-
-    public Type getGenericType() {
-        return getClass().getGenericSuperclass();
-    }
+    public void onCompleted() {}
 }

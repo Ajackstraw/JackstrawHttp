@@ -1,6 +1,8 @@
 package com.jackstraw.jackhttp.okhttp3;
 
 import com.jackstraw.jackhttp.okhttp3.OkHttpRequest.HttpMethodType;
+import com.jackstraw.jackhttp.request.RequestInterface;
+import com.jackstraw.jackhttp.response.ResponseInterface;
 
 import java.io.File;
 import java.util.List;
@@ -18,6 +20,8 @@ public class OkHttpUtils {
     private static OkHttpUtils mInstance;
     private static OkHttpClient mOkHttpClient;
     private static Platform mPlatform;
+    private static RequestInterface requestInterface;
+    private static ResponseInterface responseInterface;
 
     private OkHttpUtils(OkHttpClient okHttpClient) {
         if (okHttpClient == null) {
@@ -26,6 +30,30 @@ public class OkHttpUtils {
             mOkHttpClient = okHttpClient;
         }
         mPlatform = Platform.get();
+    }
+
+    /**
+     * 构建request实体
+     */
+    public OkHttpUtils buildRequest(RequestInterface requestInterface){
+        this.requestInterface = requestInterface;
+        return this;
+    }
+
+    /**
+     * 构建response实体
+     */
+    public OkHttpUtils buildResponse(ResponseInterface responseInterface){
+        this.responseInterface = responseInterface;
+        return this;
+    }
+
+    public static RequestInterface getRequestInterface() {
+        return requestInterface;
+    }
+
+    public static ResponseInterface getResponseInterface() {
+        return responseInterface;
     }
 
     public static OkHttpUtils initClient(OkHttpClient okHttpClient) {
