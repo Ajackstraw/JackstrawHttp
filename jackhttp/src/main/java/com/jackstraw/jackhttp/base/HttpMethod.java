@@ -7,15 +7,7 @@ package com.jackstraw.jackhttp.base;
  */
 public enum HttpMethod {
     GET("GET"),
-    POST("POST"),
-    PUT("PUT"),
-    HEAD("HEAD"),
-    MOVE("MOVE"),
-    COPY("COPY"),
-    DELETE("DELETE"),
-    OPTIONS("OPTIONS"),
-    TRACE("TRACE"),
-    CONNECT("CONNECT");
+    POST("POST");
 
     private final String value;
 

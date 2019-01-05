@@ -4,8 +4,8 @@ import android.app.Application
 import android.content.Context
 import com.jackstraw.jackhttp.okhttp3.Https
 import com.jackstraw.jackhttp.okhttp3.OkHttpUtils
-import com.jackstraw.jhttp.base.api.RequestBody
-import com.jackstraw.jhttp.base.api.ResponseBody
+import com.jackstraw.jhttp.base.api.request.RequestBody
+import com.jackstraw.jhttp.base.api.request.ResponseBody
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit

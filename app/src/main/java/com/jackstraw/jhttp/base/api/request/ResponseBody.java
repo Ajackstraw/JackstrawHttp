@@ -1,4 +1,4 @@
-package com.jackstraw.jhttp.base.api;
+package com.jackstraw.jhttp.base.api.request;
 
 import com.jackstraw.jackhttp.response.BaseResponseBody;
 import com.jackstraw.jackhttp.response.ResponseInterface;
